@@ -1,0 +1,14 @@
+version: '3.6'
+
+services:
+  db:
+    container_name: db_1
+    restart: always
+    image: bitnami/mongodb:4.2
+    ports:
+      - '27018:27017'
+    environment:
+      - MONGODB_ROOT_PASSWORD=1234567
+      - MONGODB_USERNAME=backend
+      - MONGODB_PASSWORD=backend
+      - MONGODB_DATABASE=backend
